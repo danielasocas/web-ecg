@@ -1,10 +1,28 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.template import loader
+from django.views import generic
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.core.urlresolvers import reverse_lazy
 from models import Record 
 
 # Create your views here.
-def index(request):
-    template = loader.get_template('ecg/index.html')
+class IndexView(generic.ListView):
+    template_name = 'ecg/index.html'
+    context_object_name = 'all_records'
     
-    return HttpResponse(template.render(request))
+    def get_queryset(self):
+        return Record.objects.all()
+
+class DetailView(generic.DetailView):
+    model =  Record 
+    template_name = 'ecg/detail.html'
+    
+class EcgCreate(generic.CreateView):
+    model = Record
+    fields = ['recordname']
+
+class EcgUpdate(generic.UpdateView):
+    model = Record
+    fields = ['recordname']
+    
+class EcgDelete(generic.DeleteView):
+    model = Record
+    success_url = reverse_lazy('ecg:index')
