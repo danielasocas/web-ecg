@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class FirstappConfig(AppConfig):
+class EcgConfig(AppConfig):
     name = 'ecg'

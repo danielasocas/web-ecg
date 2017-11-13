@@ -1,3 +1,4 @@
 from django.db import models
 
-# Create your models here.
+class Record(models.Model):
+    recordname = models.CharField(max_length = 6)
