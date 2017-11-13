@@ -15,14 +15,14 @@ class DetailView(generic.DetailView):
     model =  Record 
     template_name = 'ecg/detail.html'
     
-class EcgCreate(generic.CreateView):
+class RecordCreate(generic.CreateView):
     model = Record
     fields = ['recordname']
 
-class EcgUpdate(generic.UpdateView):
+class RecordUpdate(generic.UpdateView):
     model = Record
     fields = ['recordname']
     
-class EcgDelete(generic.DeleteView):
+class RecordDelete(generic.DeleteView):
     model = Record
     success_url = reverse_lazy('ecg:index')
