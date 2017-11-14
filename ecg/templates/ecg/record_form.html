@@ -7,9 +7,28 @@
             
             <h1 class="w3-text-teal">Upload ECG</h1>
             <form class = "form-horizontal" action="" method = "post" enctype="multipart/form-data">
-                <input type="text" name=""/>
-                <input type="submit" value="Submit"/>
+                {% csrf_token %}
+                
+
+                <div class= "form-group">
+                    {% for field in form %}
+                    <div class= "col-sm-offset-2 col-sm-10">
+                        <span class= "text-danger small">{{ field.errors }}</span>
+                    </div>
+                    <label class= "control-label col-sm-2">{{ field.label_tag }}</label>
+                    <div class= "col-sm-10">{{ field }}</div>
+                
+
+                    {% endfor %}
+                    
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-success">Browse</button>
+                    </div>
+                    
+                </div>
+                
             </form>
+            
         </div>
 
     </div>

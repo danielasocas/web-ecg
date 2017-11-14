@@ -1,0 +1,33 @@
+{% extends 'ecg/base.html' %}
+
+{% block body %}
+
+
+<div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Masun en traje e bano: {{ request.session.files }}</h1>
+    </div>
+    <div class="w3-twothird w3-container">
+    	<img src="/images-ecg/notimage.png" alt="SIGNAL">
+    </div>
+    <div class="w3-twothird w3-container">
+    	<img src="
+    	          {% if movie.image %}
+                  {{ movie.image_file.url }}
+                {% else %}
+                  /images-ecg/notimage.png
+                {% endif %}" alt="IMAGE">
+    </div>
+    <div id="container">
+      <button type="button tosignal-button" id="button1" >Convert Image</button>
+      <button type="button toimage-button" id="button2">Convert Signal</button>
+      <button type="button wavelet-button" id="button2">Wavelet</button>
+    </div>
+    <div class="w3-third w3-container">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center">Features</p>
+      <p class="w3-border w3-padding-large w3-padding-64 w3-center">Patology</p>
+    </div>
+</div>
+
+
+{% endblock %}
