@@ -19,4 +19,6 @@ urlpatterns = [
     
     #/ecg/record/3/
     url(r'record/converter/$', views.ConverterView.as_view(), name = 'converter'),
+    
+    url(r'record/converter/image/$', views.ImageConverter, name = 'image-converter')
 ]

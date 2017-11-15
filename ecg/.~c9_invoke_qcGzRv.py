@@ -5,7 +5,7 @@ from django.views.generic import TemplateView
 from django.core.urlresolvers import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
 from .models import Record 
-from .forms import RecordF
+import os
 import os
 
 # Create your views here.
@@ -40,11 +40,10 @@ class RecordForm(FormView):
     #     return kwargs
 
     def form_valid(self, form, file_names, file_type):
+        print(file_names[0])
         self.request.session['files'] = file_names
         self.request.session['file_type'] = file_type
-        
-        # reset session converted attribute to false 
-        self.request.session['converted'] = 'false'
+        # print(form.cleaned_data) 
         return super(RecordForm, self).form_valid(form)
 
     def post(self, request, *args, **kwargs):
@@ -65,8 +64,8 @@ class RecordForm(FormView):
                 file_type = 'image'
             elif ext == '.mat':
                 file_type = 'signal'
-            # save name of files (without extension)
-            file_names.append(os.path.splitext(file.name)[0])
+            # save name of files
+            file_names.append'h)
             filename = fs.save(file.name, file)
         
         return self.form_valid(form, file_names, file_type)
@@ -98,12 +97,8 @@ class RecordForm(FormView):
 
 def ImageConverter(request):
     print('convert image time!')
-    # to run python script, use filename stored in session and add both extensions
     
-    # set session converted attribute to true after running python script
-    request.session['converted'] = 'true'
-    return HttpResponseRedirect(reverse('ecg:converter'))
-    # return HttpResponseRedirect(reverse('ecg:converted', args=('hola')))
+    return HttpResponseRedirect('/ecg/record/converter?hola')
 
 # class RecordUpdate(generic.UpdateView):
 #     model = Record
