@@ -5,9 +5,11 @@
 
 <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">en traje e bano: converted: {{ request.session.converted }} </h1>
+      <h1 class="w3-text-teal">ECG Converter</h1>
+      <!--<h1 class="w3-text-teal">en traje e bano: converted: {{ request.session.converted }} </h1>-->
     </div>
     <div style="min-height: 300px" class="w3-twothird w3-container">
+      <h3>Signal</h3>
         {% if request.session.file_type == "signal" %}
         	<img style="max-width: 100%" src="/images-ecg/notimage.png" alt="SIGNAL">
       	{% elif request.session.file_type == "image" and request.session.converted == 'true' %}
@@ -21,13 +23,14 @@
     <center class="w3-twothird w3-container" id="container">
       <button type="button tosignal-button" onclick="window.location.href='image/'" id="button1" >Convert Signal</button>
       <button type="button toimage-button" id="button2">Convert Image</button>
-      <button type="button wavelet-button" id="button2">Wavelet</button>
+      <button type="button wavelet-button"  onclick="window.location.href='image/'" id="button2">Wavelet</button>
     </center> 
     <div class="w3-twothird w3-container">
+      <h3>Image</h3>
       {% if request.session.file_type == "image" %}        
       	<img style="max-width: 100%" src="/images-ecg/{{ request.session.files.0 }}.jpg" alt="IMAGE">
       {% elif request.session.file_type == "signal" and request.session.converted == 'true' %}
-        <img style="max-width: 100%" src="/images-ecg/notimage.png" alt="SIGNAL">
+        <img style="max-width: 100%" src="/images-ecg/{{ request.session.files.0 }}.png" alt="SIGNAL">
       {% endif %}    	
     </div>
 </div>
