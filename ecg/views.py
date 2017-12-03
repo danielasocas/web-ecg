@@ -7,12 +7,12 @@ from django.http import HttpResponseRedirect
 from .models import Record 
 from .forms import RecordF
 import os
-
 import sys
 import wfdb
 from . import savefig
 from . import wfdbi 
 from . import plotting as plt
+from . import PipelineWebApp as signal
 # from .savefig import save as savefig
 # from .wfdbi import plotrec, calc_ecg_grids, checkplotitems, peaks_hr, gqrs_plot
 # from .plotting import plotting as plt
@@ -115,7 +115,16 @@ def ImageConverter(request):
     return HttpResponseRedirect(reverse('ecg:converter'))
     # return HttpResponseRedirect(reverse('ecg:converted', args=('hola')))
     
-class Wavelet(TemplateView):
+def SignalConverter(request):
+    # to run python script use filename stored in session and add both extensions
+    record = request.session['files'][0]
+    signal.transform_image('/home/ubuntu/workspace/images-ecg/' + str(record), dummy_imagw = '/home/ubuntu/workspace/images-ecg/' )
+    # set session converted attribute to true after running python script
+    request.session['converted'] = 'true'
+    return HttpResponseRedirect(reverse('ecg:converter'))
+    # return HttpResponseRedirect(reverse('ecg:converted', args=('hola')))    
+    
+class Wavelet():
     template_name = 'ecg/wavelet.html'
 
 # class RecordUpdate(generic.UpdateView):

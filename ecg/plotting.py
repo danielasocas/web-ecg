@@ -15,7 +15,7 @@ def plotting(fullpath='',grid=1,out=''):
 
     f=open(fullpath+".hea", "r")
     samp=int(f.readline().split(" ")[3])
-    record = wfdb.rdsamp(  fullpath, sampto=samp)
+    record = wfdb.rdsamp(fullpath, sampto=samp)
     #print(rname)
     if grid==1:
         wfdbi.plotrec(record, title=sig, timeunits='seconds',figsize = (200,5),
