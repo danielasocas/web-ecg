@@ -41,6 +41,8 @@ $ sh ECG.sh training2017/
 Path: its the folder with the ECG signals. All the signals have to have .mat and .hea
 Also, the folder should be at the same level as the ECG.sh 
 
+training.csv it is an example of an output with 1 signal.
+
 ## Authors 
 
 *   **Daniela Socas** 

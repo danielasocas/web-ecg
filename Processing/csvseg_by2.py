@@ -13,7 +13,7 @@ import json
 
 #Specify where gets the signals
 fullpath=sys.argv[1][:-4]
-#fullpath = "training2017/A00001"  #Used for testing
+#fullpath = "sample1/A00001"  #Used for testing
 
 # Reads the signal as record
 record = wfdb.rdsamp(fullpath)
@@ -29,8 +29,8 @@ peak_indices = wfdb.processing.correct_peaks(d_signal, peak_indices=peak_indices
 
 # Gets QRS segment  
 j = 0 
-filewriter = csv.writer(open('training_2beat_haar.csv', 'ab'))
-filereader = csv.reader(open('REFERENCE.csv', 'ra'))
+filewriter = csv.writer(open('training.csv', 'w'))
+filereader = csv.reader(open('REFERENCE.csv', 'r'))
 
 # Gets the Signal class fro Reference.csv
 for row in filereader:
@@ -39,7 +39,7 @@ for row in filereader:
         break
     
 # Gets the signal for every pair of QRS and writes it. 
-for i in range(0, len(peak_indices)-1):
+for i in range(0, len(peak_indices)-2):
     a = peak_indices[i]
     b = peak_indices[i+1]
     c = peak_indices[i+2]
@@ -55,12 +55,14 @@ for i in range(0, len(peak_indices)-1):
         st = record.siglen 
         
     rec = wfdb.rdsamp(fullpath, sampfrom = sf, sampto = st)
+    sig = rec.p_signals
+    sig = sig.flatten()
     
     # Transform the signal in Wavelet Haar
-    cA, (cH, cV, cD) = pywt.dwt2(rec.p_signals, 'haar')
-    cA = cA.flatten()
+    #cA, (cH, cV, cD) = pywt.dwt2(rec.p_signals, 'haar')
+    #cA = cA.flatten()
     
-    sig = json.dumps(cA.tolist())
+    sig = json.dumps(sig.tolist())
     filewriter.writerow([rec.recordname, 'S%d-QRS' %j, rec.siglen, sig, sigsym])
     #print rec.recordname, 'S%d-QRS' %j, rec.siglen, sigsym, rec.p_signals
     
@@ -68,12 +70,15 @@ for i in range(0, len(peak_indices)-1):
     
 # Last QRS  
 rec = wfdb.rdsamp(fullpath, sampfrom = sf)
+sig = rec.p_signals
+sig = sig.flatten()
+
 cA, (cH, cV, cD)  = pywt.dwt2(rec.p_signals, 'haar')
 cA = cA.flatten()
 
 #Wavelet Haar other 
 #ca,cd = pywt.dwt(rec.p_signals, 'Haar')
 
-sig = json.dumps(cA.tolist())
+sig = json.dumps(sig.tolist())
 filewriter.writerow([rec.recordname, 'S%d-QRS' %j, rec.siglen, sig, sigsym])
 #print rec.recordname, 'S%d-QRS' %j, rec.siglen, sigsym, rec.p_signals

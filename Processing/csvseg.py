@@ -29,8 +29,8 @@ peak_indices = wfdb.processing.correct_peaks(d_signal, peak_indices=peak_indices
 
 # Gets QRS segment  
 j = 0 
-filewriter = csv.writer(open('training_1beat_haar.csv', 'ab'))
-filereader = csv.reader(open('REFERENCE.csv', 'ra'))
+filewriter = csv.writer(open('training_1beat_haar.csv', 'w'))
+filereader = csv.reader(open('REFERENCE.csv', 'r'))
 
 # Gets the Signal class fro Reference.csv
 for row in filereader:
@@ -50,10 +50,12 @@ for i in range(0, len(peak_indices)-1):
     if st > record.siglen: 
         sf = record.siglen     
     rec = wfdb.rdsamp(fullpath, sampfrom = sf, sampto = st)
+    sig = rec.p_signals
+    sig = sig.flatten()
     
     # Transform the signal in Wavelet Haar
-    cA, (cH, cV, cD) = pywt.dwt2(rec.p_signals, 'haar')
-    cA = cA.flatten()
+    # cA, (cH, cV, cD) = pywt.dwt2(rec.p_signals, 'haar')
+    # cA = cA.flatten()
     
     sig = json.dumps(cA.tolist())
     filewriter.writerow([rec.recordname, 'S%d-QRS' %j, rec.siglen, sig, sigsym])
@@ -63,8 +65,11 @@ for i in range(0, len(peak_indices)-1):
     
 # Last QRS  
 rec = wfdb.rdsamp(fullpath, sampfrom = sf)
-cA, (cH, cV, cD)  = pywt.dwt2(rec.p_signals, 'haar')
-cA = cA.flatten()
+sig = rec.p_signals
+sig = sig.flatten()
+
+# cA, (cH, cV, cD)  = pywt.dwt2(rec.p_signals, 'haar')
+# cA = cA.flatten()
 
 #Wavelet Haar other 
 #ca,cd = pywt.dwt(rec.p_signals, 'Haar')
