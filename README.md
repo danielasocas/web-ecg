@@ -1,5 +1,3 @@
-Author: Daniela Socas 
-
 # Miniproyecto 2017
 
 The following project is divided in two parts: 
@@ -8,16 +6,19 @@ The following project is divided in two parts:
 
     * The Pre-processing: process of the ECG signals for forecasting.  
 
+### Prerequisites
 
-# Website for ECG 
+To run this project your system needs to have all the packages and versions listed in *requirements.txt*.
+
+## Website for ECG 
 
 This project presents a web interface to deal with ECG signals and images. 
 
-## Objective
+### Objective
 
 Forecast cardiac patologies from ECG signals and images. 
 
-## What can you do?
+### What can you do?
 
 In our main page you can:
 
@@ -31,7 +32,7 @@ Future features:
     * Apply the wavelet transformation. 
     * Detect cardiac patologies.
 
-# Pre-processing ECG signals 
+## Pre-processing ECG signals 
 Example tu run: 
 ```bash
 $ sh ECG.sh training2017/ 
@@ -39,3 +40,16 @@ $ sh ECG.sh training2017/
 
 Path: its the folder with the ECG signals. All the signals have to have .mat and .hea
 Also, the folder should be at the same level as the ECG.sh 
+
+## Authors 
+
+*   **Daniela Socas** 
+
+## Last modified
+
+December 2017
+
+## Acknowledgments
+*   Prof. Masun Nabham
+*   Manuel Gomes
+*   David Klie
