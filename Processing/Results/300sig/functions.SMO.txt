@@ -1,0 +1,461 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     train4-weka.filters.unsupervised.attribute.Remove-R1-3
+Instances:    10268
+Attributes:   129
+              [list of attributes omitted]
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: N, A
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.0112 * (normalized) s1
+ +      -0.0318 * (normalized) s2
+ +       0.0307 * (normalized) s3
+ +       0.0057 * (normalized) s4
+ +      -0.0259 * (normalized) s5
+ +       0.0164 * (normalized) s6
+ +       0.0075 * (normalized) s7
+ +      -0.018  * (normalized) s8
+ +       0.0109 * (normalized) s9
+ +       0.0081 * (normalized) s10
+ +      -0.0185 * (normalized) s11
+ +       0.0095 * (normalized) s12
+ +       0.0051 * (normalized) s13
+ +      -0.0068 * (normalized) s14
+ +      -0.0054 * (normalized) s15
+ +       0.0121 * (normalized) s16
+ +       0.0075 * (normalized) s17
+ +      -0.0108 * (normalized) s18
+ +      -0.0068 * (normalized) s19
+ +       0.0097 * (normalized) s20
+ +      -0.003  * (normalized) s21
+ +      -0.0044 * (normalized) s22
+ +       0.0175 * (normalized) s23
+ +      -0.01   * (normalized) s24
+ +      -0.0055 * (normalized) s25
+ +       0.0128 * (normalized) s26
+ +      -0.0051 * (normalized) s27
+ +      -0.0026 * (normalized) s28
+ +      -0.0014 * (normalized) s29
+ +       0.0096 * (normalized) s30
+ +       0.0045 * (normalized) s31
+ +      -0.042  * (normalized) s32
+ +      -0.0228 * (normalized) s33
+ +       0.0453 * (normalized) s34
+ +       0.0164 * (normalized) s35
+ +      -0.0271 * (normalized) s36
+ +      -0.0208 * (normalized) s37
+ +       0.0472 * (normalized) s38
+ +       0.0074 * (normalized) s39
+ +      -0.0358 * (normalized) s40
+ +      -0.0009 * (normalized) s41
+ +       0.0118 * (normalized) s42
+ +       0.0163 * (normalized) s43
+ +      -0.027  * (normalized) s44
+ +       0.0173 * (normalized) s45
+ +      -0.0122 * (normalized) s46
+ +       0.0096 * (normalized) s47
+ +       0.0097 * (normalized) s48
+ +      -0.0274 * (normalized) s49
+ +       0.0207 * (normalized) s50
+ +      -0.0057 * (normalized) s51
+ +       0.0035 * (normalized) s52
+ +      -0.0041 * (normalized) s53
+ +      -0.011  * (normalized) s54
+ +       0.0237 * (normalized) s55
+ +      -0.0146 * (normalized) s56
+ +      -0.0096 * (normalized) s57
+ +       0.0233 * (normalized) s58
+ +       0.0015 * (normalized) s59
+ +      -0.0444 * (normalized) s60
+ +       0.0698 * (normalized) s61
+ +      -0.0642 * (normalized) s62
+ +       0.0364 * (normalized) s63
+ +      -0.0063 * (normalized) s64
+ +      -0.012  * (normalized) s65
+ +       0.0164 * (normalized) s66
+ +      -0.0214 * (normalized) s67
+ +       0.0255 * (normalized) s68
+ +      -0.0289 * (normalized) s69
+ +       0.0255 * (normalized) s70
+ +      -0.0167 * (normalized) s71
+ +       0.0044 * (normalized) s72
+ +       0.0092 * (normalized) s73
+ +      -0.0165 * (normalized) s74
+ +       0.0154 * (normalized) s75
+ +      -0.0011 * (normalized) s76
+ +      -0.0222 * (normalized) s77
+ +       0.0349 * (normalized) s78
+ +      -0.0239 * (normalized) s79
+ +       0.0052 * (normalized) s80
+ +       0.0002 * (normalized) s81
+ +       0.0008 * (normalized) s82
+ +       0.0095 * (normalized) s83
+ +      -0.0305 * (normalized) s84
+ +       0.0352 * (normalized) s85
+ +      -0.0071 * (normalized) s86
+ +      -0.0235 * (normalized) s87
+ +       0.0261 * (normalized) s88
+ +      -0.0101 * (normalized) s89
+ +       0.0072 * (normalized) s90
+ +      -0.0098 * (normalized) s91
+ +       0.0016 * (normalized) s92
+ +       0.0147 * (normalized) s93
+ +      -0.0032 * (normalized) s94
+ +      -0.0242 * (normalized) s95
+ +       0.0168 * (normalized) s96
+ +       0.0051 * (normalized) s97
+ +      -0.0128 * (normalized) s98
+ +       0.0144 * (normalized) s99
+ +      -0.0126 * (normalized) s100
+ +      -0.0097 * (normalized) s101
+ +       0.0509 * (normalized) s102
+ +      -0.0398 * (normalized) s103
+ +       0.0067 * (normalized) s104
+ +      -0.0306 * (normalized) s105
+ +       0.0319 * (normalized) s106
+ +      -0.0034 * (normalized) s107
+ +      -0.0015 * (normalized) s108
+ +      -0.0094 * (normalized) s109
+ +       0.0132 * (normalized) s110
+ +      -0.0164 * (normalized) s111
+ +       0.0328 * (normalized) s112
+ +      -0.0337 * (normalized) s113
+ +      -0.0017 * (normalized) s114
+ +       0.0353 * (normalized) s115
+ +      -0.0262 * (normalized) s116
+ +       0.0415 * (normalized) s117
+ +      -0.0211 * (normalized) s118
+ +      -0.0262 * (normalized) s119
+ +       0.0098 * (normalized) s120
+ +      -0.015  * (normalized) s121
+ +       0.0217 * (normalized) s122
+ +      -0.012  * (normalized) s123
+ +       0.0026 * (normalized) s124
+ +       0.0154 * (normalized) s125
+ +      -0.0158 * (normalized) s126
+ +      -0.0085 * (normalized) s127
+ +       0.0124 * (normalized) s128
+ -       1.0026
+
+Number of kernel evaluations: 79857293 (51.641% cached)
+
+Classifier for classes: N, O
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.2161 * (normalized) s1
+ +      -1.1181 * (normalized) s2
+ +      -1.4878 * (normalized) s3
+ +      -1.262  * (normalized) s4
+ +      -0.1213 * (normalized) s5
+ +       1.0445 * (normalized) s6
+ +       1.1529 * (normalized) s7
+ +       0.4438 * (normalized) s8
+ +      -0.3193 * (normalized) s9
+ +      -0.7388 * (normalized) s10
+ +      -0.4389 * (normalized) s11
+ +       0.4226 * (normalized) s12
+ +       1.3807 * (normalized) s13
+ +       1.9908 * (normalized) s14
+ +       1.9659 * (normalized) s15
+ +       1.4519 * (normalized) s16
+ +       0.8368 * (normalized) s17
+ +       0.4196 * (normalized) s18
+ +       0.7359 * (normalized) s19
+ +       1.7251 * (normalized) s20
+ +       2.0317 * (normalized) s21
+ +       0.4952 * (normalized) s22
+ +      -3.0219 * (normalized) s23
+ +      -6.3735 * (normalized) s24
+ +      -6.5451 * (normalized) s25
+ +      -3.4971 * (normalized) s26
+ +      -0.1283 * (normalized) s27
+ +       0.9862 * (normalized) s28
+ +       0.8201 * (normalized) s29
+ +       0.9863 * (normalized) s30
+ +       1.4275 * (normalized) s31
+ +       1.5312 * (normalized) s32
+ +       1.0537 * (normalized) s33
+ +       0.4668 * (normalized) s34
+ +       0.1168 * (normalized) s35
+ +      -0.2482 * (normalized) s36
+ +      -0.7287 * (normalized) s37
+ +      -0.9442 * (normalized) s38
+ +      -0.4689 * (normalized) s39
+ +       0.2814 * (normalized) s40
+ +       1.0685 * (normalized) s41
+ +       1.3061 * (normalized) s42
+ +       0.8082 * (normalized) s43
+ +       0.3357 * (normalized) s44
+ +       0.2309 * (normalized) s45
+ +      -0.0753 * (normalized) s46
+ +      -0.4921 * (normalized) s47
+ +       0.3676 * (normalized) s48
+ +       0.7661 * (normalized) s49
+ +       0.2261 * (normalized) s50
+ +      -0.0645 * (normalized) s51
+ +       0.1567 * (normalized) s52
+ +       0.3648 * (normalized) s53
+ +      -0.368  * (normalized) s54
+ +      -0.4854 * (normalized) s55
+ +      -0.2615 * (normalized) s56
+ +       0.1254 * (normalized) s57
+ +      -0.1104 * (normalized) s58
+ +      -0.1009 * (normalized) s59
+ +      -0.2303 * (normalized) s60
+ +       0.008  * (normalized) s61
+ +      -0.0713 * (normalized) s62
+ +      -0.1249 * (normalized) s63
+ +      -0.1546 * (normalized) s64
+ +       0.0679 * (normalized) s65
+ +       0.2824 * (normalized) s66
+ +       0.0039 * (normalized) s67
+ +      -0.2691 * (normalized) s68
+ +      -0.1691 * (normalized) s69
+ +      -0.0294 * (normalized) s70
+ +      -0.0592 * (normalized) s71
+ +      -0.1096 * (normalized) s72
+ +      -0.032  * (normalized) s73
+ +       0.0316 * (normalized) s74
+ +       0.0819 * (normalized) s75
+ +      -0.2367 * (normalized) s76
+ +      -0.3482 * (normalized) s77
+ +       0.1514 * (normalized) s78
+ +       0.1697 * (normalized) s79
+ +      -0.0773 * (normalized) s80
+ +      -0.2507 * (normalized) s81
+ +      -0.0396 * (normalized) s82
+ +      -0.329  * (normalized) s83
+ +      -0.0932 * (normalized) s84
+ +       0.1161 * (normalized) s85
+ +      -0.2013 * (normalized) s86
+ +      -0.0693 * (normalized) s87
+ +      -0.2872 * (normalized) s88
+ +      -0.3584 * (normalized) s89
+ +       0.1429 * (normalized) s90
+ +       0.7559 * (normalized) s91
+ +       0.9723 * (normalized) s92
+ +       0.5595 * (normalized) s93
+ +       0.4233 * (normalized) s94
+ +       0.4711 * (normalized) s95
+ +       0.5874 * (normalized) s96
+ +       0.023  * (normalized) s97
+ +      -1.0803 * (normalized) s98
+ +      -1.6145 * (normalized) s99
+ +      -1.3388 * (normalized) s100
+ +      -0.5405 * (normalized) s101
+ +       0.3566 * (normalized) s102
+ +       0.8058 * (normalized) s103
+ +       0.7705 * (normalized) s104
+ +      -0.0854 * (normalized) s105
+ +      -0.3723 * (normalized) s106
+ +      -0.4543 * (normalized) s107
+ +      -0.2588 * (normalized) s108
+ +       0.2322 * (normalized) s109
+ +       0.5941 * (normalized) s110
+ +       0.4986 * (normalized) s111
+ +       0.1265 * (normalized) s112
+ +      -0.1051 * (normalized) s113
+ +       0.1239 * (normalized) s114
+ +       0.3134 * (normalized) s115
+ +       0.0475 * (normalized) s116
+ +      -0.754  * (normalized) s117
+ +      -0.3159 * (normalized) s118
+ +      -0.2777 * (normalized) s119
+ +      -0.4088 * (normalized) s120
+ +      -0.2126 * (normalized) s121
+ +      -0.0252 * (normalized) s122
+ +       0.0277 * (normalized) s123
+ +       0.2852 * (normalized) s124
+ +       0.3171 * (normalized) s125
+ +       0.3744 * (normalized) s126
+ +       0.5073 * (normalized) s127
+ +       0.7275 * (normalized) s128
+ -       0.6566
+
+Number of kernel evaluations: 7916177 (68.548% cached)
+
+Classifier for classes: A, O
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.0143 * (normalized) s1
+ +       0.0299 * (normalized) s2
+ +      -0.0255 * (normalized) s3
+ +      -0.0009 * (normalized) s4
+ +       0.0123 * (normalized) s5
+ +       0.0009 * (normalized) s6
+ +      -0.0182 * (normalized) s7
+ +       0.0194 * (normalized) s8
+ +      -0.014  * (normalized) s9
+ +       0.01   * (normalized) s10
+ +       0.0007 * (normalized) s11
+ +      -0.0102 * (normalized) s12
+ +      -0.0015 * (normalized) s13
+ +       0.0132 * (normalized) s14
+ +       0.005  * (normalized) s15
+ +      -0.0199 * (normalized) s16
+ +       0.0065 * (normalized) s17
+ +       0.0136 * (normalized) s18
+ +      -0.0108 * (normalized) s19
+ +      -0.0018 * (normalized) s20
+ +       0.0114 * (normalized) s21
+ +      -0.007  * (normalized) s22
+ +      -0.008  * (normalized) s23
+ +       0.003  * (normalized) s24
+ +       0.0133 * (normalized) s25
+ +      -0.019  * (normalized) s26
+ +       0.0043 * (normalized) s27
+ +      -0.001  * (normalized) s28
+ +       0.0124 * (normalized) s29
+ +      -0.002  * (normalized) s30
+ +      -0.0205 * (normalized) s31
+ +       0.0173 * (normalized) s32
+ +       0.0153 * (normalized) s33
+ +      -0.0151 * (normalized) s34
+ +      -0.0144 * (normalized) s35
+ +       0.0034 * (normalized) s36
+ +       0.035  * (normalized) s37
+ +      -0.0412 * (normalized) s38
+ +       0.012  * (normalized) s39
+ +       0.004  * (normalized) s40
+ +       0.0181 * (normalized) s41
+ +      -0.0288 * (normalized) s42
+ +       0.006  * (normalized) s43
+ +       0.0208 * (normalized) s44
+ +      -0.0258 * (normalized) s45
+ +       0.021  * (normalized) s46
+ +      -0.0161 * (normalized) s47
+ +      -0.0006 * (normalized) s48
+ +       0.0076 * (normalized) s49
+ +       0.0111 * (normalized) s50
+ +      -0.0335 * (normalized) s51
+ +       0.0198 * (normalized) s52
+ +       0.0206 * (normalized) s53
+ +      -0.03   * (normalized) s54
+ +       0.0227 * (normalized) s55
+ +      -0.0298 * (normalized) s56
+ +       0.0366 * (normalized) s57
+ +      -0.0302 * (normalized) s58
+ +       0.0177 * (normalized) s59
+ +      -0.0147 * (normalized) s60
+ +      -0.0039 * (normalized) s61
+ +       0.0281 * (normalized) s62
+ +      -0.0362 * (normalized) s63
+ +       0.0275 * (normalized) s64
+ +      -0.0103 * (normalized) s65
+ +      -0.0044 * (normalized) s66
+ +       0.0094 * (normalized) s67
+ +      -0.0158 * (normalized) s68
+ +       0.021  * (normalized) s69
+ +      -0.0071 * (normalized) s70
+ +      -0.0141 * (normalized) s71
+ +       0.0124 * (normalized) s72
+ +      -0.0071 * (normalized) s73
+ +       0.0071 * (normalized) s74
+ +      -0.0025 * (normalized) s75
+ +       0.0008 * (normalized) s76
+ +       0      * (normalized) s77
+ +       0.0013 * (normalized) s78
+ +      -0.0004 * (normalized) s79
+ +      -0.0008 * (normalized) s80
+ +       0.0046 * (normalized) s81
+ +      -0.0018 * (normalized) s82
+ +      -0.0191 * (normalized) s83
+ +       0.031  * (normalized) s84
+ +      -0.0086 * (normalized) s85
+ +      -0.0164 * (normalized) s86
+ +       0.0068 * (normalized) s87
+ +       0.0136 * (normalized) s88
+ +      -0.0105 * (normalized) s89
+ +      -0.015  * (normalized) s90
+ +       0.0081 * (normalized) s91
+ +       0.0274 * (normalized) s92
+ +      -0.032  * (normalized) s93
+ +       0.0091 * (normalized) s94
+ +      -0.0032 * (normalized) s95
+ +       0.008  * (normalized) s96
+ +      -0.0093 * (normalized) s97
+ +       0.0183 * (normalized) s98
+ +      -0.0211 * (normalized) s99
+ +       0.0014 * (normalized) s100
+ +       0.0305 * (normalized) s101
+ +      -0.0435 * (normalized) s102
+ +       0.0195 * (normalized) s103
+ +       0.012  * (normalized) s104
+ +      -0.0104 * (normalized) s105
+ +      -0.0032 * (normalized) s106
+ +       0.0033 * (normalized) s107
+ +       0.0156 * (normalized) s108
+ +      -0.0263 * (normalized) s109
+ +       0.0102 * (normalized) s110
+ +       0.0171 * (normalized) s111
+ +      -0.021  * (normalized) s112
+ +       0.0005 * (normalized) s113
+ +      -0.0053 * (normalized) s114
+ +       0.0247 * (normalized) s115
+ +      -0.024  * (normalized) s116
+ +      -0.0057 * (normalized) s117
+ +       0.0102 * (normalized) s118
+ +       0.0159 * (normalized) s119
+ +      -0.0184 * (normalized) s120
+ +      -0.0023 * (normalized) s121
+ +       0.0056 * (normalized) s122
+ +      -0.0051 * (normalized) s123
+ +       0.0135 * (normalized) s124
+ +      -0.0236 * (normalized) s125
+ +       0.0389 * (normalized) s126
+ +      -0.0074 * (normalized) s127
+ +      -0.0108 * (normalized) s128
+ +       1.0003
+
+Number of kernel evaluations: 29446164 (58.448% cached)
+
+
+
+Time taken to build model: 57.76 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        5961               58.0541 %
+Incorrectly Classified Instances      4307               41.9459 %
+Kappa statistic                          0.0609
+Mean absolute error                      0.3328
+Root mean squared error                  0.4297
+Relative absolute error                 90.7576 %
+Root relative squared error            100.3581 %
+Total Number of Instances            10268     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.998    0.945    0.572      0.998    0.727      0.165    0.526     0.572     N
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.078     A
+                 0.065    0.003    0.920      0.065    0.121      0.188    0.531     0.400     O
+Weighted Avg.    0.581    0.529    0.654      0.581    0.450      0.160    0.526     0.471     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 5719    0   14 |    a = N
+  795    0    7 |    b = A
+ 3491    0  242 |    c = O
+

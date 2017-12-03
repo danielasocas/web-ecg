@@ -5,10 +5,10 @@ import os
 #os.remove('training.csv')
 #os.remove('training-wavelet.csv')
 
-with open('training.csv', 'w') as csvfile:
+with open('training.csv', 'wb') as csvfile:
     filewriter = csv.writer(csvfile, delimiter=',',
                             quotechar='|', quoting=csv.QUOTE_MINIMAL)
-    filewriter.writerow(['Record', 'Segment',  'Length', 'Symbol', 'Signal'])   
+    filewriter.writerow(['Record', 'Segment'  'Length', 'Signal',  'Symbol'])
     
 # with open('training-wavelet.csv', 'wb') as csvfile_wave:
 #     filewriter_wave = csv.writer(csvfile_wave, delimiter=',',
