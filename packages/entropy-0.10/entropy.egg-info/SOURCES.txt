@@ -1,0 +1,8 @@
+README
+entropymodule.c
+setup.cfg
+setup.py
+entropy.egg-info/PKG-INFO
+entropy.egg-info/SOURCES.txt
+entropy.egg-info/dependency_links.txt
+entropy.egg-info/top_level.txt
